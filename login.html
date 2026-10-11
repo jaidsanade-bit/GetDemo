@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mobile Doctor - Login</title>
+
+    <style>
+        body {body {
+    font-family: Arial, sans-serif;
+    background:
+        linear-gradient(
+            rgba(255, 255, 255, 0.78),
+            rgba(240, 245, 250, 0.82)
+        ),
+        url("repair-technician.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+        }
+
+        .login-box {
+            width: 320px;
+            margin: 70px auto;
+            padding: 25px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 0 10px #b5d8f5;
+            text-align: center;
+        }
+
+        h1 {
+            color: #0878d1;
+        }
+
+        .login-heading {
+            color: #0878d1;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 97%;
+            padding: 10px;
+            background: #0878d1;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #055da5;
+        }
+
+        .login-links {
+            text-align: center;
+            margin-top: 20px;
+            line-height: 2;
+        }
+
+        .login-link {
+            color: #0878d1;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .login-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="login-box">
+
+        <h1>Mobile Doctor</h1>
+
+        <h2 class="login-heading">Login_Now!</h2>
+
+        <form action="login.html" method="get">
+            <input
+                type="email"
+                name="email"
+                placeholder="Enter Email"
+                required
+            >
+
+            <input
+                type="password"
+                name="password"
+                placeholder="Enter Password"
+                required
+            >
+
+            <button type="submit">Login</button>
+        </form>
+
+        <div class="login-links">
+
+            <p>Don't have an account?</p>
+
+            <a href="./registration.html" class="login-link">
+                Register Now
+            </a>
+
+            <br>
+
+            <a href="./forgot.html" class="login-link">
+                Forgot Password?
+            </a>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Doctor | Feedback</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            position: relative;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            color: #173b67;
+            background: #eff6ff;
+        }
+
+        /* हल्का टेक्नीशियन बैकग्राउंड */
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            z-index: -1;
+            pointer-events: none;
+            background:
+                linear-gradient(rgba(255,255,255,.80), rgba(239,246,255,.84)),
+                url("images/mobile-technician.png") center / cover no-repeat;
+            opacity: .45;
+        }
+
+        nav {
+            background: rgba(255,255,255,.94);
+            padding: 16px 6%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            box-shadow: 0 2px 10px #dbeafe;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            color: #0757b8;
+            text-decoration: none;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .brand-icon {
+            width: 38px;
+            height: 38px;
+        }
+
+        nav a.nav-link {
+            color: #0757b8;
+            text-decoration: none;
+            margin: 5px 8px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #1684e8;
+        }
+
+        main {
+            width: min(600px, 92%);
+            margin: 45px auto;
+        }
+
+        .feedback-box {
+            background: rgba(255,255,255,.93);
+            padding: 32px;
+            border-radius: 14px;
+            box-shadow: 0 8px 28px rgba(23,59,103,.14);
+        }
+
+        h1 {
+            text-align: center;
+            color: #0757b8;
+            margin-bottom: 10px;
+        }
+
+        .intro {
+            text-align: center;
+            color: #536b85;
+            line-height: 1.6;
+            margin-bottom: 24px;
+        }
+
+        label {
+            display: block;
+            margin: 16px 0 7px;
+            font-weight: bold;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #b8cde3;
+            border-radius: 7px;
+            font: inherit;
+            background: white;
+        }
+
+        textarea {
+            min-height: 130px;
+            resize: vertical;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 20px;
+            padding: 13px;
+            border: 0;
+            border-radius: 7px;
+            background: #0872e5;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #064b9b;
+        }
+
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 18px;
+            color: #0757b8;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        @media (max-width: 480px) {
+            .feedback-box {
+                padding: 23px 18px;
+            }
+
+            nav {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a class="brand" href="index.html">
+            <svg class="brand-icon" viewBox="0 0 48 48"
+                 role="img" aria-label="Mobile Doctor logo">
+                <rect x="7" y="3" width="25" height="42" rx="5"
+                      fill="none" stroke="currentColor" stroke-width="3"/>
+                <path d="M13 24h5l3-7 5 14 4-7h5"
+                      fill="none" stroke="currentColor"
+                      stroke-width="2.5" stroke-linecap="round"
+                      stroke-linejoin="round"/>
+                <circle cx="19.5" cy="39" r="1.5" fill="currentColor"/>
+            </svg>
+            <span>Mobile Doctor</span>
+        </a>
+
+        <div>
+            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link" href="services.html">Services</a>
+            <a class="nav-link" href="login.html">Login</a>
+        </div>
+    </nav>
+
+    <main>
+        <section class="feedback-box">
+            <h1>Share Your Feedback</h1>
+            <p class="intro">
+                Tell us about your experience. Your feedback helps us improve
+                our mobile repair service.
+            </p>
+
+            <form action="#" method="post">
+                <label for="name">Your name</label>
+                <input type="text" id="name" name="name"
+                       placeholder="Enter your name" required>
+
+                <label for="email">Email address</label>
+                <input type="email" id="email" name="email"
+                       placeholder="you@example.com" required>
+
+                <label for="rating">How was our service?</label>
+                <select id="rating" name="rating" required>
+                    <option value="">Choose a rating</option>
+                    <option value="excellent">Excellent</option>
+                    <option value="good">Good</option>
+                    <option value="average">Average</option>
+                    <option value="poor">Needs improvement</option>
+                </select>
+
+                <label for="message">Your feedback</label>
+                <textarea id="message" name="message"
+                          placeholder="Write your feedback here..."
+                          required></textarea>
+
+                <button type="submit">Submit Feedback</button>
+            </form>
+
+            <a class="back-link" href="index.html">← Back to Home</a>
+        </section>
+    </main>
+</body>
+</html>
